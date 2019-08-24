@@ -164,7 +164,7 @@ def user_stats(df):
     try:
         gender = df['Gender'].value_counts()
     except:
-        print('No gender data available')
+        print('Sorry, no gender data is available for this city')
     else:
         print(gender, '\n')
 
@@ -174,7 +174,7 @@ def user_stats(df):
         recent_birth = int(df['Birth Year'].max())
         common_birth = int(df['Birth Year'].mode())
     except:
-       print('No year of birth data available')
+       print('Sorry, no year of birth data is available for this city')
     else:
         print('Years of birth \nEarliest year of birth: ', earliest_birth, '\nMost recent year of birth: ', recent_birth, '\nMost common year of birth: ', common_birth)
 
