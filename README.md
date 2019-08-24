@@ -14,4 +14,4 @@ washington.csv
 bikeshare.py
 
 ### Credits
-With thanks to Udacity
+**With thanks to Udacity**
