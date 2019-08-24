@@ -19,13 +19,13 @@ def get_filters():
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     city = input("Enter the name of the city you would like to analyze: ").lower()
     while city not in ["chicago", "new york city", "washington"]:
-        print("Please enter another city")
+        print("This city is not available. Please check the spelling or enter another city")
         city = input("Enter the name of the city you would like to analyze: ").lower()
 
     # TO DO: get user input for month (all, january, february, ... , june)
     month = input("Enter the name of the month to filter by, or enter 'all' to apply no month filter: ").lower()
     while month not in ["january", "february", "march", "april", "may", "june", "all"]:
-        print("Please enter another month")
+        print("Data is only available from January until June. Please enter another month")
         month = input("Enter the name of the month to filter by, or enter 'all' to apply no month filter: ").lower()
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
@@ -164,7 +164,7 @@ def user_stats(df):
     try:
         gender = df['Gender'].value_counts()
     except:
-        print('No gender data available')
+        print('Sorry, no gender data is available for this city')
     else:
         print(gender, '\n')
 
@@ -174,7 +174,7 @@ def user_stats(df):
         recent_birth = int(df['Birth Year'].max())
         common_birth = int(df['Birth Year'].mode())
     except:
-       print('No year of birth data available')
+       print('Sorry, no year of birth data is available for this city')
     else:
         print('Years of birth \nEarliest year of birth: ', earliest_birth, '\nMost recent year of birth: ', recent_birth, '\nMost common year of birth: ', common_birth)
 
