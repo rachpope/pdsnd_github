@@ -14,4 +14,4 @@ Looks at 6 months of bike share data for 3 cities in the USA. Allows users to re
 * bikeshare.py
 
 ### Credits
-**With thanks to Udacity**
+**With thanks to Udacity** :simple_smile:
